@@ -7,17 +7,16 @@
 #include "shape.h"
 #include "shapetypes.h"
 
-namespace geometrize
-{
+namespace geometrize {
 class Shape;
 }
 
-namespace geometrize
-{
+namespace geometrize {
 
 /**
- * @brief createDefaultShapeCreator Creates an instance of the default shape creator object.
- * The setup, mutate and rasterize methods are bound with default methods.
+ * @brief createDefaultShapeCreator Creates an instance of the default shape
+ * creator object. The setup, mutate and rasterize methods are bound with
+ * default methods.
  * @param types The types of shapes to create.
  * @param xMin The minimum x coordinate of the shapes created.
  * @param yMin The minimum y coordinate of the shapes created.
@@ -25,7 +24,10 @@ namespace geometrize
  * @param yMax The maximum y coordinate of the shapes created.
  * @return The default shape creator.
  */
-std::function<std::shared_ptr<geometrize::Shape>()> createDefaultShapeCreator(geometrize::ShapeTypes types, std::int32_t xMin, std::int32_t yMin, std::int32_t xMax, std::int32_t yMax);
+std::function<std::shared_ptr<geometrize::Shape>()>
+createDefaultShapeCreator(geometrize::ShapeTypes types, std::int32_t xMin,
+                          std::int32_t yMin, std::int32_t xMax,
+                          std::int32_t yMax);
 
 /**
  * @brief create Creates a new shape of the specified type.
@@ -47,4 +49,4 @@ std::shared_ptr<geometrize::Shape> randomShape();
  */
 std::shared_ptr<geometrize::Shape> randomShapeOf(geometrize::ShapeTypes t);
 
-}
+} // namespace geometrize

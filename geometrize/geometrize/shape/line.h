@@ -5,16 +5,14 @@
 
 #include "shape.h"
 
-namespace geometrize
-{
+namespace geometrize {
 
 /**
  * @brief The Line class represents a simple line.
  * @author Sam Twidale (https://samcodes.co.uk/)
  */
-class Line : public Shape
-{
-public:
+class Line : public Shape {
+  public:
     Line() = default;
     Line(float x1, float y1, float x2, float y2);
 
@@ -27,4 +25,4 @@ public:
     float m_y2; ///< Second y-coordinate.
 };
 
-}
+} // namespace geometrize

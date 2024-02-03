@@ -5,11 +5,12 @@
 
 #include "shape.h"
 
-namespace geometrize
-{
+namespace geometrize {
 
-RotatedRectangle::RotatedRectangle(const float x1, const float y1, const float x2, const float y2, const float angle) : Shape()
-{
+RotatedRectangle::RotatedRectangle(const float x1, const float y1,
+                                   const float x2, const float y2,
+                                   const float angle)
+    : Shape() {
     m_x1 = x1;
     m_y1 = y1;
     m_x2 = x2;
@@ -17,9 +18,9 @@ RotatedRectangle::RotatedRectangle(const float x1, const float y1, const float x
     m_angle = angle;
 }
 
-std::shared_ptr<geometrize::Shape> RotatedRectangle::clone() const
-{
-    std::shared_ptr<geometrize::RotatedRectangle> rect{std::make_shared<geometrize::RotatedRectangle>()};
+std::shared_ptr<geometrize::Shape> RotatedRectangle::clone() const {
+    std::shared_ptr<geometrize::RotatedRectangle> rect{
+        std::make_shared<geometrize::RotatedRectangle>()};
     rect->m_x1 = m_x1;
     rect->m_y1 = m_y1;
     rect->m_x2 = m_x2;
@@ -31,9 +32,8 @@ std::shared_ptr<geometrize::Shape> RotatedRectangle::clone() const
     return rect;
 }
 
-geometrize::ShapeTypes RotatedRectangle::getType() const
-{
+geometrize::ShapeTypes RotatedRectangle::getType() const {
     return geometrize::ShapeTypes::ROTATED_RECTANGLE;
 }
 
-}
+} // namespace geometrize

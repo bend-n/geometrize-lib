@@ -5,16 +5,14 @@
 
 #include "shape.h"
 
-namespace geometrize
-{
+namespace geometrize {
 
 /**
  * @brief The Circle class represents a circle.
  * @author Sam Twidale (https://samcodes.co.uk/)
  */
-class Circle : public Shape
-{
-public:
+class Circle : public Shape {
+  public:
     Circle() = default;
     Circle(float x, float y, float r);
 
@@ -26,4 +24,4 @@ public:
     float m_r; ///< Radius.
 };
 
-}
+} // namespace geometrize

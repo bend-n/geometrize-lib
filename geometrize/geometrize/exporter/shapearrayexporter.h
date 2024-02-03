@@ -3,16 +3,13 @@
 #include <string>
 #include <vector>
 
-namespace geometrize
-{
+namespace geometrize {
 struct ShapeResult;
 }
 
-namespace geometrize
-{
+namespace geometrize {
 
-namespace exporter
-{
+namespace exporter {
 
 /**
  * @brief exportShapeArray Exports shape data to a compact array-style format.
@@ -23,8 +20,8 @@ namespace exporter
  * @param data The shape data to export.
  * @return A string containing the exported data.
  */
-std::string exportShapeArray(const std::vector<geometrize::ShapeResult>& data);
+std::string exportShapeArray(const std::vector<geometrize::ShapeResult> &data);
 
-}
+} // namespace exporter
 
-}
+} // namespace geometrize

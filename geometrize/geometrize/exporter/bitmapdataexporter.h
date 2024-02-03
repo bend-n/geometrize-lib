@@ -2,24 +2,22 @@
 
 #include <string>
 
-namespace geometrize
-{
+namespace geometrize {
 class Bitmap;
 }
 
-namespace geometrize
-{
+namespace geometrize {
 
-namespace exporter
-{
+namespace exporter {
 
 /**
- * @brief exportBitmapData Exports the raw image data to a binary dump - just the data as RGBA8888, no zero-padding or anything.
+ * @brief exportBitmapData Exports the raw image data to a binary dump - just
+ * the data as RGBA8888, no zero-padding or anything.
  * @param bitmapData The image data to save as binary data.
  * @return A string containing the raw bitmap data.
  */
-std::string exportBitmapData(const geometrize::Bitmap& bitmapData);
+std::string exportBitmapData(const geometrize::Bitmap &bitmapData);
 
-}
+} // namespace exporter
 
-}
+} // namespace geometrize

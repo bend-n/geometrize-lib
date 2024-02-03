@@ -7,17 +7,16 @@
 
 #include "shape.h"
 
-namespace geometrize
-{
+namespace geometrize {
 
-Polyline::Polyline(const std::vector<std::pair<float, float>>& points) : Shape()
-{
+Polyline::Polyline(const std::vector<std::pair<float, float>> &points)
+    : Shape() {
     m_points = points;
 }
 
-std::shared_ptr<geometrize::Shape> Polyline::clone() const
-{
-    std::shared_ptr<geometrize::Polyline> polyline{std::make_shared<geometrize::Polyline>()};
+std::shared_ptr<geometrize::Shape> Polyline::clone() const {
+    std::shared_ptr<geometrize::Polyline> polyline{
+        std::make_shared<geometrize::Polyline>()};
     polyline->m_points = m_points;
     polyline->setup = setup;
     polyline->mutate = mutate;
@@ -25,9 +24,8 @@ std::shared_ptr<geometrize::Shape> Polyline::clone() const
     return polyline;
 }
 
-geometrize::ShapeTypes Polyline::getType() const
-{
+geometrize::ShapeTypes Polyline::getType() const {
     return geometrize::ShapeTypes::POLYLINE;
 }
 
-}
+} // namespace geometrize

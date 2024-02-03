@@ -5,16 +5,14 @@
 
 #include "shape.h"
 
-namespace geometrize
-{
+namespace geometrize {
 
 /**
  * @brief The Triangle class represents a triangle.
  * @author Sam Twidale (https://samcodes.co.uk/)
  */
-class Triangle : public Shape
-{
-public:
+class Triangle : public Shape {
+  public:
     Triangle() = default;
     Triangle(float x1, float y1, float x2, float y2, float x3, float y3);
 
@@ -29,4 +27,4 @@ public:
     float m_y3; ///< Third y-coordinate.
 };
 
-}
+} // namespace geometrize

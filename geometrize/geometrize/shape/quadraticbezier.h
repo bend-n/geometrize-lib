@@ -5,16 +5,14 @@
 
 #include "shape.h"
 
-namespace geometrize
-{
+namespace geometrize {
 
 /**
  * @brief The QuadraticBezier class represents a quadratic bezier curve.
  * @author Sam Twidale (https://samcodes.co.uk/)
  */
-class QuadraticBezier : public Shape
-{
-public:
+class QuadraticBezier : public Shape {
+  public:
     QuadraticBezier() = default;
     QuadraticBezier(float cx, float cy, float x1, float y1, float x2, float y2);
 
@@ -29,4 +27,4 @@ public:
     float m_y2; ///< Second y-coordinate.
 };
 
-}
+} // namespace geometrize
